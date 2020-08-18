@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Alice {
     public static void main(String[] args) {
-        String firstSentence = "\n" +
+        String firstSentence =
                 "Alice was beginning to get very tired of sitting by her sister on the bank, \n" +
                 "and of having nothing to do: once or twice she had peeped into the book her \n" +
                 "sister was reading, but it had no pictures or conversations in it, 'and what \n" +
@@ -12,12 +12,12 @@ public class Alice {
         System.out.println(firstSentence);
         Scanner input = new Scanner(System.in);
         System.out.print("Enter your word for searching: ");
-        String searching = input.nextLine().toLowerCase();
-        System.out.println(firstSentence.toLowerCase().contains(searching));
-        int index = firstSentence.toLowerCase().indexOf(searching);
-        int length = searching.toLowerCase().length();
+        String searching = input.nextLine();
+        System.out.println(firstSentence.toLowerCase().contains(searching.toLowerCase()));
+        int index = firstSentence.toLowerCase().indexOf(searching.toLowerCase());
+        int length = searching.length();
         System.out.println("the length of your word: "+ length + "\nthe index is: " + index);
-        String updatedFirstSentence = firstSentence.replace(searching, "");
+        String updatedFirstSentence = firstSentence.toLowerCase().replace(searching.toLowerCase(), "");
         System.out.println(updatedFirstSentence);
     }
 }
