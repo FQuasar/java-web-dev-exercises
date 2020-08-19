@@ -13,6 +13,5 @@ public class Area {
         double A = Circle.getArea(r);
         System.out.println("The area of a circle of radius 2.5 is: "+ A);
 
-
     }
 }

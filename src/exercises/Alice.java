@@ -13,9 +13,11 @@ public class Alice {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter your word for searching: ");
         String searching = input.nextLine();
-        System.out.println(firstSentence.toLowerCase().contains(searching.toLowerCase()));
-        int index = firstSentence.toLowerCase().indexOf(searching.toLowerCase());
-        int length = searching.length();
+        String lowerSentence = firstSentence.toLowerCase();
+        String lowerSearching = searching.toLowerCase();
+        System.out.println(lowerSentence.contains(lowerSearching));
+        int index = lowerSentence.indexOf(lowerSearching);
+        int length = lowerSearching.length();
         System.out.println("the length of your word: "+ length + "\nthe index is: " + index);
         String updatedFirstSentence = firstSentence.toLowerCase().replace(searching.toLowerCase(), "");
         System.out.println(updatedFirstSentence);
